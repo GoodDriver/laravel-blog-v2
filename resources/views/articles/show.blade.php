@@ -26,7 +26,7 @@
                 <hr id="comment{{ $comment->id }}">
                 @if( $comment->user_id == 1 )
                   <img src="/v.jpg" class="img-circle z-avatar">
-                  <p class="z-name z-center-vertical">sad creeper <span class="label label-info z-label">作 者</span></p>
+                  <p class="z-name z-center-vertical">stormzhao<span class="label label-info z-label">作 者</span></p>
                 @elseif( $comment->website )
                   <p class="z-avatar-text"><?php echo $comment['avatar_text'] ? $comment['avatar_text'] : '匿' ?></p>
                   <a href="{{ $comment->website }}" target="_blank">
