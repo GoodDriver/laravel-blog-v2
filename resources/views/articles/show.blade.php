@@ -13,7 +13,7 @@
                 </div>
             @endif
             <h1 class="z-title">{{ $article->title }}</h1>
-            <p class="z-info"><span style="margin-right:20px">{{$article->created_at_date}}</span>sad creeper</p>
+            <p class="z-info"><span style="margin-right:20px">{{$article->created_at_date}}</span>stormzhao</p>
             <div class="z-content">
               {!! $article->content !!}
             </div>
@@ -42,7 +42,7 @@
                   @foreach( $comment->replys as $reply )
                     @if( $reply->user_id == 1 )
                       <img src="/v.jpg" class="img-circle z-avatar">
-                      <p class="z-name z-center-vertical">sad creeper <span class="label label-info z-label">作 者</span></p>
+                      <p class="z-name z-center-vertical">stormzhao<span class="label label-info z-label">作 者</span></p>
                     @elseif( $reply->website )
                       <p class="z-avatar-text"><?php echo $reply['avatar_text'] ? $reply['avatar_text'] : '匿' ?></p>
                       <a href="{{ $reply->website }}" target="_blank">
