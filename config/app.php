@@ -163,6 +163,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        // 七牛云存储
+        itbdw\QiniuStorage\QiniuFilesystemServiceProvider::class,
 
         /*
          * Package Service Providers...

@@ -43,6 +43,15 @@ return [
 
     'disks' => [
 
+        // 七牛云存储
+        'qiniu' => [
+            'driver'    => 'qiniu',
+            'domain'    => 'pcrzfemn7.bkt.clouddn.com',  //你的七牛域名
+            'access_key'=> '712ssai20FXLW_RhLgQhEJt_GLm6IeDNGNHcdHbl',    //AccessKey
+            'secret_key'=> 'diEZo5NkPXlzNnO0c0P6PHXUzW_wu-03qwA6MjQ2',   //SecretKey
+            'bucket'    => 'myblog',    //Bucket名字
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

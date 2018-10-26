@@ -84,7 +84,7 @@ class SiderLayout extends React.Component {
                   <span>访客记录</span>
                 </Link>
               </Menu.Item>
-              <Menu.Item key="5">
+              {/*<Menu.Item key="5">
                 <Link to="/users">
                   <Icon type="user" />
                   <span>用户管理</span>
@@ -95,7 +95,7 @@ class SiderLayout extends React.Component {
                   <Icon type="setting" />
                   <span>网站管理</span>
                 </Link>
-              </Menu.Item>
+              </Menu.Item >*/}
               <Menu.Item key="7">
                 <a href="/">
                   <Icon type="logout" />

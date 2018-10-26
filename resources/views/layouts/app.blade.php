@@ -111,7 +111,7 @@
 
         <footer class="z-footer">
             <p class="z-text">DESIGN & FRONT-END CODE BY</p>
-            <p class="z-text-big">sad creeper</p>
+            <p class="z-text-big">sad creeper & storm</p>
         </footer>
     </div>
 
