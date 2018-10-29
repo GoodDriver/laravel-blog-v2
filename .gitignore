@@ -11,4 +11,3 @@ npm-debug.log
 yarn-error.log
 .env
 /public/git_pull.php
-public/js/admin.js
