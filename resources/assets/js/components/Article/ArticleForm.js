@@ -74,10 +74,10 @@ export class ArticleForm extends React.Component {
     this.setState({tags: value})
   }
   handleChange = (content) => {
-    console.log(content);
+    // console.log(content);
   }
   handleHTMLChange = (html) => {
-    console.log(html);
+    // console.log(html);
     this.setState({
       content: html,
       share_content:html
