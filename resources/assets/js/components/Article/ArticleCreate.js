@@ -38,7 +38,7 @@ export class ArticleCreate extends React.Component {
         content:article.content,
       })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response.status == 200) {
           message.success(response.data.message)
           location.replace('#/articles')
