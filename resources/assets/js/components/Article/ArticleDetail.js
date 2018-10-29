@@ -32,7 +32,7 @@ export class ArticleDetail extends React.Component {
     });
   }
   handleSubmit(article) {
-    console.log(article);
+    // console.log(article);
     var that = this
     if (article.title == '') {
       message.error('标题不能为空');
@@ -46,7 +46,7 @@ export class ArticleDetail extends React.Component {
         content:article.content,
       })
       .then(function (response) {
-        console.log(response);
+        // console.log(response);
         if (response.status == 200) {
           message.success(response.data.message)
         }
