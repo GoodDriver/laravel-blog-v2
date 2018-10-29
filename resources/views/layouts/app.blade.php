@@ -110,8 +110,8 @@
         @yield('content')
 
         <footer class="z-footer">
-            <p class="z-text">DESIGN & FRONT-END CODE BY</p>
-            <p class="z-text-big"><a href="">storm</a></p>
+            <p class="z-text">友情链接</p>
+            <p class="z-text-big"><a href="">storm</a> & <a href="http://bestszy.cn">songzy</a></p>
         </footer>
     </div>
 
