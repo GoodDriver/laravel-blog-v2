@@ -75,7 +75,7 @@ class SiderLayout extends React.Component {
               <Menu.Item key="3">
                 <Link to="/comments">
                   <Icon type="message" />
-                  <span>留言管理</span>
+                  <span>评论管理</span>
                 </Link>
               </Menu.Item>
               <Menu.Item key="4">

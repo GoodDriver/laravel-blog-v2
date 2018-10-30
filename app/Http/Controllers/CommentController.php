@@ -29,7 +29,7 @@ class CommentController extends Controller
     $comment->city = $city['region'].' '.$city['city'];
     $comment->target_name = $request->target_name;
     $comment->save();
-    return back()->with('message', '留言成功！');
+    return back()->with('message', '评论成功！');
   }
   /**
    * 返回所有的评论 [API]
