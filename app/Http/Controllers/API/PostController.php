@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Article;
+use App\Http\Resources\PostResource;
 
 class PostController extends Controller
 {
@@ -12,16 +13,16 @@ class PostController extends Controller
 	public function index(Request $request)
 	{
 
-		$articles = Article::where('is_hidden', 0)->orderBy('is_top', 'desc')->orderBy('created_at', 'desc')->simplePaginate(15);
+		$articles = Article::where('is_hidden', 0)->orderBy('is_top', 'desc')->orderBy('created_at', 'desc')->simplePaginate(10);
 
 		$items = [];
 
 		foreach ($articles as $post) {
 			$item['id'] = $post->id;
 			$item['title'] = $post->title;
-			$item['summary'] = $post->content;
-			// $item['thumb'] = url(config('blog.uploads.webpath') . '/' . $post->page_image);
-			$item['posted_at'] = $post->created_at;
+			$item['summary'] = strip_tags($post->content);
+			$item['thumb'] = url('/default.jpg');
+			$item['posted_at'] = Date($post->created_at);
 			$item['views'] = mt_rand(1, 10000); // 暂时没有实现文章浏览数逻辑，返回随机数
 			$items[] = $item;
 		}
@@ -32,5 +33,11 @@ class PostController extends Controller
 		];
 
 		return response()->json($data);
+	}
+
+	public function detail($id)
+	{
+		$post = Article::findOrFail($id);
+		return new PostResource($post);
 	}
 }
